@@ -71,7 +71,7 @@ export default () => {
                                 <input
                                     type="text"
                                     required
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm rounded-lg"
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm"
                                 />
                             </div>
                             <div>
@@ -81,7 +81,7 @@ export default () => {
                                 <input
                                     type="email"
                                     required
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm rounded-lg"
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm"
                                 />
                             </div>
                             <div>
@@ -91,17 +91,17 @@ export default () => {
                                 <input
                                     type="text"
                                     required
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm rounded-lg"
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm"
                                 />
                             </div>
                             <div>
                                 <label className="font-medium">
                                     Message
                                 </label>
-                                <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-black shadow-sm rounded-lg"></textarea>
+                                <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-black shadow-sm"></textarea>
                             </div>
                             <button
-                                className="w-full px-4 py-2 text-white font-medium bg-black hover:bg-black active:bg-black rounded-lg duration-150"
+                                className="w-full px-4 py-2 text-white font-medium bg-black hover:bg-black active:bg-black duration-150"
                             >
                                 Submit
                             </button>

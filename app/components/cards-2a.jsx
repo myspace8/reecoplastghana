@@ -7,22 +7,23 @@ import { useState } from 'react';
 const products = [
   {
     id: 1,
-    description: 'Statistics on the Positive Environmental Impact of Recycled Plastics in Construction',
+    description: 'Our pavement bricks are engineered using a unique blend of recycled platic waste and other additives to create a durable and waterproof solution for various construction projects.',
     href: '#',
-    title: 'Environmental Impact',
-    svg: 'https://www.svgrepo.com/show/429031/care-earth-eco.svg',
+    title: 'Reecoplast pavement bricks',
+    image: '/pavement-bricks.jpeg'
   },
   {
     id: 2,
-    description: 'We are focused on reducing plastic waste pollution and promoting sustainable building practices.',
+    description: 'We produce high-quality pallets made from recycled plastic waste. These pallets can be used as raw materials in various industries such as, plastic manufacturing, packaging and more.',
     href: '#',
-    title: 'Sustainability Initiative',
-    svg: 'https://cdn-icons-png.flaticon.com/512/5974/5974156.png',
+    title: 'Reecoplast pallets',
+    image: 'plastic-palletes.jpeg',
   },
   // More products...
 ];
 
-export default function Card() {
+
+export default function CardA() {
   const [hoveredProductId, setHoveredProductId] = useState(null);
 
   const handleMouseEnter = (productId) => {
@@ -34,8 +35,8 @@ export default function Card() {
   };
 
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-18 lg:max-w-7xl lg:px-8">
+    <div className="">
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-18 lg:max-w-7xl lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
           {products.map((product) => (
             <Link href={product.href} key={product.id}>
@@ -48,9 +49,9 @@ export default function Card() {
               >
                 <div>
                   <img
-                    src={product.svg}
+                    src={product.image}
                     alt={product.title}
-                    className="h-full w-[75px] object-cover object-center lg:h-full lg:w-[100px]"
+                    className="h-[350px] w-full object-cover object-center lg:h-[400px] lg:w-full"
                   />
                 </div>
                 <div>
