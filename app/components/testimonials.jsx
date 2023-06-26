@@ -36,7 +36,7 @@ export default function Testimonials() {
           (prevTestimonial + 1) % testimonials.length;
         return nextTestimonial;
       });
-    }, 4000);
+    }, 7000);
 
     return () => {
       clearInterval(interval);
@@ -44,7 +44,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-14 h-[500px]">
+    <section className="py-14 h-[430px]">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-gray-400 font-semibold pb-6">

@@ -26,7 +26,7 @@ export default () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
             ,
-            contact: "Ghana, Kumasi"
+            contact: "Ghana, Kumasi - Nerebehin"
         },
     ]
 
@@ -35,14 +35,14 @@ export default () => {
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
                     <div className="max-w-lg space-y-3">
-                        <h3 className="text-black font-semibold">
+                        <h3 className="text-gray-400 font-semibold">
                             Contact
                         </h3>
                         <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                             Let us know how we can help
                         </p>
                         <p>
-                            We’re here to help and answer any question you might have, We look forward to hearing from you! Please fill out the form, or us the contact information bellow .
+                            For all quesitons relating to business or collaboration. Please reach out by filling out the form, or use any of the contact information below .
                         </p>
                         <div>
                             <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
