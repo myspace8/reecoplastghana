@@ -9,8 +9,7 @@ module.exports = {
     images: {
       domains: ['firebasestorage.googleapis.com'],
       domains: ['images.unsplash.com'],
+      domains: ['cdn-icons-png.flaticon.com'],
     },
     reactStrictMode: true,
   };
-  
-  

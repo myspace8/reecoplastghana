@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -10,14 +11,14 @@ const products = [
     description: 'Statistics on the Positive Environmental Impact of Recycled Plastics in Construction',
     href: '#',
     title: 'Environmental Impact',
-    svg: 'https://www.svgrepo.com/show/429031/care-earth-eco.svg',
+    svg: '/care-earth-eco.svg',
   },
   {
     id: 2,
     description: 'We are focused on reducing plastic waste pollution and promoting sustainable building practices.',
     href: '#',
     title: 'Sustainability Initiative',
-    svg: 'https://cdn-icons-png.flaticon.com/512/5974/5974156.png',
+    svg: '/recycle.png',
   },
   // More products...
 ];
@@ -47,7 +48,9 @@ export default function Card() {
                 onMouseLeave={handleMouseLeave}
               >
                 <div>
-                  <img
+                  <Image
+                    width={1500}
+                    height={1500}
                     src={product.svg}
                     alt={product.title}
                     className="h-full w-[75px] object-cover object-center lg:h-full lg:w-[100px]"

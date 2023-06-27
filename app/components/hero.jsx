@@ -1,8 +1,12 @@
+import Image from "next/image";
+
   export default function Hero() {
     return (
       <div className="relative isolate overflow-hidden bg-gray-900 pb-6 pt-16 lg:pt-64 sm:pb-34">
-        <img
-          src="https://scx2.b-cdn.net/gfx/news/2022/gjenge-makers-a-kenyan.jpg"
+        <Image
+          width={1500}
+          height={1500}
+          src="/plastic-mabbles.jpeg"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center md:object-center"
         />

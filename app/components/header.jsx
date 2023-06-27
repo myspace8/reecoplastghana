@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -22,7 +23,9 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Reecoplastghana</span>
-              <img
+              <Image
+                width={1500}
+                height={1500}
                 className="h-8 w-auto"
                 src="/reecoplastlogo.jpg"
                 alt="Reecoplast Logo"

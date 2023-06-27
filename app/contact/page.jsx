@@ -1,6 +1,6 @@
 'use client'
 
-export default () => {
+export default function Contact() {
 
     const contactMethods = [
         {

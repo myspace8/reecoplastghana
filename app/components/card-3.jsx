@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -10,21 +11,21 @@ const products = [
     description: 'We seek partnerships with organizations, suppliers and construction industry stakeholders who share our sustainability vision, aiming to make a positive environmental impact together',
     href: '#',
     title: 'Strategic Partnership',
-    svg: 'https://media.istockphoto.com/id/967255466/vector/handshake-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=8yqvBlIpOR1M1fRMMjpD4ETI79y6aRCGivKW-egDbpE=',
+    svg: '/handshake.jpeg',
   },
   {
     id: 2,
     description: "From environmental NGOs to research institutions and industry associations, we work together to advance sustainable solutions in the construction sector, fostering synergies for a greener future.",
     href: '#',
     title: 'Synergistic Collaborations',
-    svg: 'https://static.thenounproject.com/png/323406-200.png',
+    svg: '/sustainability.png',
   },
   {
     id: 3,
     description: 'Collaborating with industry experts and construction consultants, we ensure our products meet high standards and address evolving needs, delivering quality solutions for the construction industry.',
     href: '#',
     title: 'Expert Consultancy',
-    svg: 'https://us.123rf.com/450wm/vectorhome/vectorhome1907/vectorhome190700240/127607849-turnover-icon-vector.jpg?ver=6',
+    svg: '/expert-collabo.webp',
   },
 ];
 
@@ -53,7 +54,9 @@ export default function CardB() {
                 onMouseLeave={handleMouseLeave}
               >
                 <div>
-                  <img
+                  <Image
+                    width={1500}
+                    height={1500}
                     src={product.svg}
                     alt={product.title}
                     className="h-full w-[75px] object-cover object-center lg:h-full lg:w-[100px]"

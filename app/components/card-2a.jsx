@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -17,7 +18,7 @@ const products = [
     description: 'We produce high-quality pallets made from recycled plastic waste. These pallets can be used as raw materials in various industries such as, plastic manufacturing, packaging and more.',
     href: '#',
     title: 'Reecoplast pallets',
-    image: 'plastic-palletes.jpeg',
+    image: '/plastic-palletes.jpeg',
   },
   // More products...
 ];
@@ -48,7 +49,9 @@ export default function CardA() {
                 onMouseLeave={handleMouseLeave}
               >
                 <div>
-                  <img
+                  <Image
+                    width={1500}
+                    height={1500}
                     src={product.image}
                     alt={product.title}
                     className="h-[350px] w-full object-cover object-center lg:h-[400px] lg:w-full"

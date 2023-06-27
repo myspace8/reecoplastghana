@@ -6,6 +6,7 @@ export default function Testimonials() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const testimonials = [
     {
+      id: 1,
       avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
       name: "Sarah M",
       title: "GreenTech Solutions",
@@ -13,6 +14,7 @@ export default function Testimonials() {
         "Impressed by the performance of recycled plastic pavement bricks. Smooth roads, reduced plastic waste, and a win for sustainability and aesthetics!",
     },
     {
+      id: 2,
       avatar: "https://randomuser.me/api/portraits/women/79.jpg",
       name: "Angela Stian",
       title: "EcoTech Constructors",
@@ -20,6 +22,7 @@ export default function Testimonials() {
         "Game-changer for our warehouse! Sturdy waste plastic pallets streamline logistics, reduce carbon footprint. A win-win solution for efficiency and sustainability.",
     },
     {
+      id: 3,
       avatar: "https://randomuser.me/api/portraits/men/86.jpg",
       name: "Karim Ahmed",
       title: "EcoConstruct Builders",
@@ -87,7 +90,7 @@ export default function Testimonials() {
         <div className="mt-6">
           <ul className="flex gap-x-3 justify-center">
             {testimonials.map((item, idx) => (
-              <li key={idx}>
+              <li key={item.id}>
                 <button
                   className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-black focus:ring ${
                     currentTestimonial === idx ? "bg-black" : "bg-gray-300"
