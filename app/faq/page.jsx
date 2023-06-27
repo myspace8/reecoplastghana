@@ -49,7 +49,7 @@ const FaqsCard = (props) => {
     )
 }
 
-export default () => {
+export default function Faq() {
 
     const faqsList = [
         {
@@ -93,6 +93,7 @@ export default () => {
                 {
                     faqsList.map((item) => (
                         <FaqsCard
+                            key={item.id}
                             idx={item.id}
                             faqsList={item}
                         />

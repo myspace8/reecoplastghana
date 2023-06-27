@@ -44,7 +44,7 @@ export default function Testimonials() {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [testimonials.length]);
 
   return (
     <section className="py-14 h-[430px]">
@@ -68,14 +68,7 @@ export default function Testimonials() {
                       </p>
                     </blockquote>
                     <div className="mt-6">
-                      {/* <img
-                        src={item.avatar}
-                        className="w-16 h-16 mx-auto rounded-full"
-                      /> */}
                       <div className="mt-3">
-                        {/* <span className="block text-gray-800 font-semibold">
-                          {item.name}
-                        </span> */}
                         <span className="block text-gray-600 text-sm mt-0.5">
                           {item.title}
                         </span>

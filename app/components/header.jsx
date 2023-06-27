@@ -56,7 +56,9 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Reecoplastghana</span>
-                <img
+                <Image
+                  width={1500}
+                  height={1500}
                   className="h-8 w-auto"
                   src="/reecoplast.jpg"
                   alt=""

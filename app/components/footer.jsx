@@ -3,22 +3,22 @@ export default function Footer() {
     const footerNavs = [
         {
             id: 1,
-            href: 'javascript:void()',
+            href: '#',
             name: 'Terms'
         },
         {
             id: 2,
-            href: 'javascript:void()',
+            href: '#',
             name: 'License'
         },
         {
             id: 3,
-            href: 'javascript:void()',
+            href: '#',
             name: 'Privacy'
         },
         {
             id: 4,
-            href: 'javascript:void()',
+            href: '#',
             name: 'About us'
         }
     ]
@@ -30,8 +30,8 @@ export default function Footer() {
                             <ul className="flex flex-wrap items-center justify-center gap-4 sm:text-base">
                                 {
                                     footerNavs.map((item) => (
-                                        <li className="text-gray-800 hover:text-gray-500">
-                                            <a key={item.id} href={item.href}>
+                                        <li key={item.id} className="text-gray-800 hover:text-gray-500">
+                                            <a href={item.href}>
                                                 {item.name}
                                             </a>
                                         </li>
