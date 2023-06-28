@@ -23,14 +23,14 @@ export default function Footer() {
         }
     ]
     return (
-        <footer className="pt-10">
-            <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-                <div className="flex flex-col gap-4 mt-4 py-5 border-t md:text-center">
+        <footer className="mt-10 bg-gray-900">
+            <div className="max-w-screen-xl mx-auto px-4 text-white md:px-8">
+                <div className="flex flex-col gap-4 mt-4 py-5 md:text-center">
                         <div className="space-y-6">
                             <ul className="flex flex-wrap items-center justify-center gap-4 sm:text-base">
                                 {
                                     footerNavs.map((item) => (
-                                        <li key={item.id} className="text-gray-800 hover:text-gray-500">
+                                        <li key={item.id} className="text-white">
                                             <a href={item.href}>
                                                 {item.name}
                                             </a>

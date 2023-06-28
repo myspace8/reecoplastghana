@@ -40,7 +40,7 @@ import Image from "next/image";
             <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-white  md:text-6xl md:tracking-tight">
                 <span>Transforming waste into</span> <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Sustainable</span> <span>Building Solutions</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <p className="mt-6 text-base lg:text-lg leading-8 text-gray-300">
               Build Smart. Build Green.
             </p>
           </div>

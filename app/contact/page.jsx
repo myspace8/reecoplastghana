@@ -1,6 +1,40 @@
 'use client'
+import { useState } from 'react'
+import { db } from '../config/firebase'
+import { collection, addDoc } from "firebase/firestore"
+import Faq from '../faq/page';
 
 export default function Contact() {
+    const [isSubmitted, setIsubmitted] = useState(false);
+    const [fullname, setFullname] = useState('')
+    const [email, setEmail] = useState('');
+    const [company, setCompany] = useState('');
+    const [phone, setPhone] = useState(0)
+    const [message, setMessage] = useState('')
+  
+    const contactRef = collection(db, 'contact')
+  
+    const onSubmitContact = async (e) => {
+      e.preventDefault();
+      try {
+        await addDoc(contactRef, {
+          fullname: fullname,
+          email: email,
+          company: company,
+          phone: phone,
+          message: message,
+        })
+        setIsubmitted(true)
+        setFirstname('')
+        setLastname('')
+        setEmail('')
+        setPhone(0)
+        setMessage('')
+        console.log('submitted');
+      } catch(err) {
+        console.log(err);
+      }
+    }
 
     const contactMethods = [
         {
@@ -17,7 +51,7 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                 </svg>
             ,
-            contact: "+223 (000) 000-000"
+            contact: "+223 24 (089) 4565"
         },
         {
             icon:
@@ -60,8 +94,13 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
+                        {isSubmitted ? (
+                        <div className=''>Message submitted succesfully</div>
+                        ) 
+                        : 
+                        (
                         <form
-                            onSubmit={(e) => e.preventDefault()}
+                            onSubmit={onSubmitContact}
                             className="space-y-5"
                         >
                             <div>
@@ -69,6 +108,8 @@ export default function Contact() {
                                     Full name
                                 </label>
                                 <input
+                                    onChange={(e)=> setFullname(e.target.value)}
+                                    value={fullname}
                                     type="text"
                                     required
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm"
@@ -79,7 +120,21 @@ export default function Contact() {
                                     Email
                                 </label>
                                 <input
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
                                     type="email"
+                                    required
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm"
+                                />
+                            </div>
+                            <div>
+                                <label className="font-medium">
+                                    Phone
+                                </label>
+                                <input
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    value={phone}
+                                    type="number"
                                     required
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm"
                                 />
@@ -89,8 +144,9 @@ export default function Contact() {
                                     Company
                                 </label>
                                 <input
+                                    onChange={(e) => setCompany(e.target.value)}
+                                    value={company}
                                     type="text"
-                                    required
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-black shadow-sm"
                                 />
                             </div>
@@ -98,17 +154,27 @@ export default function Contact() {
                                 <label className="font-medium">
                                     Message
                                 </label>
-                                <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-black shadow-sm"></textarea>
+                                <textarea 
+                                onChange={(e) => setMessage(e.target.value)}
+                                value={message}
+                                required 
+                                className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-black shadow-sm">
+
+                                </textarea>
                             </div>
                             <button
+                                type='submit'
                                 className="w-full px-4 py-2 text-white font-medium bg-black hover:bg-black active:bg-black duration-150"
                             >
                                 Submit
                             </button>
                         </form>
+
+                        )}
                     </div>
                 </div>
             </div>
+            <Faq />
         </main>
     )
 }

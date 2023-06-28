@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef, useState } from "react"
-import ReachOut from "../components/reachout"
 
 const FaqsCard = (props) => {
 
@@ -77,24 +76,10 @@ export default function Faq() {
   
     return (
         <section className="leading-relaxed max-w-screen-xl mt-24 mx-auto px-4 md:px-8">
-            {/* <div className="space-y-3 text-">
-                <h1 className="text-3xl text-gray-800 font-semibold">
-                    Frequently Asked Questions
-                </h1>
-                <p className="text-gray-600 max-w-lg mx-auto text-lg">
-                    Answered all frequently asked questions, Still confused? feel free to contact us.
-                </p>
-            </div> */}
             <div className="bg-white sm:py-22">
                 <div className="mx-auto max-w-7xl lg:px-8">
                     <div className="mx-auto max-w-2xl lg:text-center">
                     <h2 className="text-base font-semibold leading-7 text-gray-400">Frequently Asked Questions</h2>
-                    {/* <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Making waste plastics useful
-                    </p> */}
-                    {/* <p className="mt-6 text-lg leading-8 text-gray-600">
-                    We source plastic waste from local recycling centres and work with construction companies to encourage the use of eco-friendly building materials.
-                    </p> */}
                     </div>
                 </div>
             </div>
