@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from "react"
+import ReachOut from "../components/reachout"
 
 const FaqsCard = (props) => {
 
@@ -21,7 +22,7 @@ const FaqsCard = (props) => {
             key={idx}
             onClick={handleOpenAnswer}
         >
-            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
+            <h4 className="cursor-pointer pb-2 flex items-center justify-between text-base text-gray-700 font-medium">
                 {faqsList.q}
                 {
                     state ? (
@@ -40,7 +41,7 @@ const FaqsCard = (props) => {
                 style={state ? {height: answerH } : {height: '0px'}}
             >
                 <div>
-                    <p className="text-gray-500">
+                    <p className="text-gray-500 text-sm">
                         {faqsList.a}
                     </p>
                 </div>
@@ -54,42 +55,50 @@ export default function Faq() {
     const faqsList = [
         {
             id: 1,
-            q: "What are some random questions to ask?",
-            a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question."
+            q: "What are the benefit of using Reecoplast's pavement bricks and pellets?",
+            a: "Our pavement bricks and pellets are made from 100% recycled plastic waste, offering a sustainable alternative to traditional construction materials. They are durable, waterproof, and exceed industry standards in compressive strength, ensureing high-quality and long-lasting structures."
         },
         {
             id: 2,
-            q: "Do you include common questions?",
-            a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator."
+            q: "How does choosing Reecoplast's products contribute to sustainability?",
+            a: "By choosing our products, you actively contribute to reducing plastic waste and promoting environmental preservation. Each brick and pellet you use is a step towards a greener future, supporting the reduction of landfill burden and minimizing the extraction of natural resources."
         },
         {
             id: 3,
-            q: "Can I use this for 21 questions?",
-            a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated."
+            q: "How does Reecoplast ensure transparency and customer satisfaction?",
+            a: "As a socially responsible company, we prioritize transparency, quality, and customer satisfaction. We maintain open communication, provide detailed information about our products and processes, and strive to exceed expectations. Our commitment to excellence extends to building meaningful partnerships with construction companies, plastic manufacturers, and packaging companies that share our vision."
         },
         {
             id: 4,
-            q: "Are these questions for girls or for boys?",
-            a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with)."
+            q: "How can I get involved or collaborate with Reecoplast?",
+            a: "We welcome collaboration and partnerships from organizations and individuals who share our passion for sustainability. Explore our website to learn more about our products, successful projects, and connect with us to explore collaboration opportunities. Together, let's build a world where plastic waste becomes a valuable resource and construction is sysnonymous with sustainability."
         },
-        {
-            id: 5,
-            q: "What do you wish you had more talent doing?",
-            a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
-        }
     ]
   
     return (
         <section className="leading-relaxed max-w-screen-xl mt-24 mx-auto px-4 md:px-8">
-            <div className="space-y-3 text-center">
+            {/* <div className="space-y-3 text-">
                 <h1 className="text-3xl text-gray-800 font-semibold">
                     Frequently Asked Questions
                 </h1>
                 <p className="text-gray-600 max-w-lg mx-auto text-lg">
                     Answered all frequently asked questions, Still confused? feel free to contact us.
                 </p>
+            </div> */}
+            <div className="bg-white sm:py-22">
+                <div className="mx-auto max-w-7xl lg:px-8">
+                    <div className="mx-auto max-w-2xl lg:text-center">
+                    <h2 className="text-base font-semibold leading-7 text-gray-400">Frequently Asked Questions</h2>
+                    {/* <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Making waste plastics useful
+                    </p> */}
+                    {/* <p className="mt-6 text-lg leading-8 text-gray-600">
+                    We source plastic waste from local recycling centres and work with construction companies to encourage the use of eco-friendly building materials.
+                    </p> */}
+                    </div>
+                </div>
             </div>
-            <div className="mt-14 max-w-2xl mx-auto">
+            <div className="max-w-2xl mx-auto">
                 {
                     faqsList.map((item) => (
                         <FaqsCard

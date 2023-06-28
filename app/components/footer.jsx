@@ -18,7 +18,7 @@ export default function Footer() {
         },
         {
             id: 4,
-            href: '#',
+            href: '/about',
             name: 'About us'
         }
     ]

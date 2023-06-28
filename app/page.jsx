@@ -8,6 +8,7 @@ import Testimonials from './components/testimonials'
 import ReachOut from '@/app/components/reachout'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react'
+import Faq from './faq/page'
 
 export default function Home() {
 
@@ -65,6 +66,7 @@ export default function Home() {
       </div>
       {/* ----- */}
       <ReachOut />
+      <Faq />
     </main>
   )
 }

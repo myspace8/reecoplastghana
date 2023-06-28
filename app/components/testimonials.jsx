@@ -19,7 +19,7 @@ export default function Testimonials() {
       name: "Angela Stian",
       title: "EcoTech Constructors",
       quote:
-        "Game-changer for our warehouse! Sturdy waste plastic pallets streamline logistics, reduce carbon footprint. A win-win solution for efficiency and sustainability.",
+        "Game-changer for our warehouse! Sturdy waste plastic pellets streamline logistics, reduce carbon footprint. A win-win solution for efficiency and sustainability.",
     },
     {
       id: 3,
@@ -63,17 +63,17 @@ export default function Testimonials() {
                 >
                   <figure>
                     <blockquote>
-                      <p className="text-gray-800 text-xl font-semibold sm:text-2xl">
+                      <p className="text-gray-800 text-lg sm:text-xl">
                         “{item.quote}“
                       </p>
                     </blockquote>
-                    <div className="mt-6">
+                    {/* <div className="mt-6">
                       <div className="mt-3">
                         <span className="block text-gray-600 text-sm mt-0.5">
                           {item.title}
                         </span>
                       </div>
-                    </div>
+                    </div> */}
                   </figure>
                 </li>
               )

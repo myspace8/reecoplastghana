@@ -15,9 +15,9 @@ const products = [
   },
   {
     id: 2,
-    description: 'We produce high-quality pallets made from recycled plastic waste. These pallets can be used as raw materials in various industries such as, plastic manufacturing, packaging and more.',
+    description: 'We produce high-quality pellets made from recycled plastic waste. These pellets can be used as raw materials in various industries such as, plastic manufacturing, packaging and more.',
     href: '#',
-    title: 'Reecoplast pallets',
+    title: 'Reecoplast pellets',
     image: '/plastic-palletes.jpeg',
   },
   // More products...
@@ -61,10 +61,10 @@ export default function CardA() {
                   <h2 className="text-2xl font-semibold text-black">{product.title}</h2>
                 </div>
                 <div>
-                  <h3 className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-700">
                     <span aria-hidden="true" className="absolute inset-0" />
                     {product.description}
-                  </h3>
+                  </p>
                 </div>
                 <div className='flex items-center gap-4'>
                   <span aria-hidden="true" className="absolute inset-0" />
