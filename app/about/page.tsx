@@ -21,8 +21,8 @@ export default function AboutPage() {
                 />
               </div>
               <div className="md:w-1/2">
-                <p className="text-lg mb-4">At Reecoplast, we're passionate about creating a sustainable future through innovative building solutions. Our team of experts works tirelessly to transform waste materials into high-quality, eco-friendly building products.</p>
-                <p className="text-lg mb-4">Founded in 2010, Reecoplast has been at the forefront of sustainable construction practices. We believe that the construction industry has a crucial role to play in combating climate change and preserving our planet's resources for future generations.</p>
+                <p className="text-lg mb-4">{"At Reecoplast, we're passionate about creating a sustainable future through innovative building solutions. Our team of experts works tirelessly to transform waste materials into high-quality, eco-friendly building products"}.</p>
+                <p className="text-lg mb-4">{"Founded in 2010, Reecoplast has been at the forefront of sustainable construction practices. We believe that the construction industry has a crucial role to play in combating climate change and preserving our planet's resources for future generations."}</p>
                 <p className="text-lg mb-4">Our mission is to revolutionize the construction industry by providing sustainable, high-performance building materials that reduce waste, lower carbon emissions, and create healthier living environments.</p>
               </div>
             </div>

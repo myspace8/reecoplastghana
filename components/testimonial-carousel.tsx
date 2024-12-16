@@ -46,7 +46,7 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
               <Card className="p-8 bg-blue-50">
                 <Quote className="w-12 h-12 text-orange-500 mb-6" />
                 <p className="text-lg md:text-xl mb-6 text-gray-700 italic">
-                  "{testimonial.comment}"
+                {`${testimonial.comment}`}
                 </p>
                 <div>
                   <div className="font-semibold text-lg">{testimonial.name}</div>

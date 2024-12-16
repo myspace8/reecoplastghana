@@ -7,7 +7,7 @@ import { NewsItem } from "@/components/news-item"
 import { AnimatedHeroText } from "@/components/animated-hero-text"
 import { AnimatedCounter } from "@/components/animated-counter"
 import { BackToTop } from "@/components/back-to-top"
-import { Recycle, Factory, HardHat, Leaf, Truck, Users, Facebook, Twitter, Instagram, MapPin, Clock, Mail, Phone } from 'lucide-react'
+import { Recycle, Factory, HardHat, Leaf, Truck, Users, Facebook, Twitter, Instagram, MapPin, Clock, Mail, Phone, Linkedin } from 'lucide-react'
 import TestimonialCarousel from "@/components/testimonial-carousel"
 import { FAQSection } from "@/components/faq-section"
 
@@ -143,10 +143,10 @@ export default function Home() {
               </div>
               <div className="md:w-1/2">
                 <p className="text-lg mb-4">
-                  At Reecoplast, we're passionate about creating a sustainable future through innovative building solutions. Our team of experts works tirelessly to transform waste materials into high-quality, eco-friendly building products.
+                 {" At Reecoplast, we're passionate about creating a sustainable future through innovative building solutions. Our team of experts works tirelessly to transform waste materials into high-quality, eco-friendly building products."}
                 </p>
                 <p className="text-lg mb-4">
-                  With years of experience and a commitment to environmental stewardship, we're leading the charge in sustainable construction practices. Our goal is to reduce the construction industry's carbon footprint while delivering superior building materials.
+                  {"With years of experience and a commitment to environmental stewardship, we're leading the charge in sustainable construction practices. Our goal is to reduce the construction industry's carbon footprint while delivering superior building materials."}
                 </p>
                 <Button variant="outline" className="mt-4" asChild>
                   <a href="/about">Learn More About Us</a>
@@ -300,14 +300,17 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4">Reecoplast</h3>
               <p className="mb-4">Building a sustainable future, one brick at a time.</p>
               <div className="flex space-x-4">
-                <a href="#" aria-label="Facebook" className="hover:text-green-400">
+                <a href="!#" aria-label="Facebook" className="hover:text-green-400">
                   <Facebook size={24} />
                 </a>
-                <a href="#" aria-label="Twitter" className="hover:text-green-400">
+                <a href="!#" aria-label="Twitter" className="hover:text-green-400">
                   <Twitter size={24} />
                 </a>
-                <a href="#" aria-label="Instagram" className="hover:text-green-400">
+                <a href="!#" aria-label="Instagram" className="hover:text-green-400">
                   <Instagram size={24} />
+                </a>
+                <a href="https://www.linkedin.com/in/project-reecoplast/" target='_blank' aria-label="Instagram" className="hover:text-green-400">
+                  <Linkedin size={24} />
                 </a>
               </div>
             </div>
